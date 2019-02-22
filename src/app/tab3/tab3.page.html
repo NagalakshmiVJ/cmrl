@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contact Us
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img src="/assets/cmrl.jpg"></ion-img>
+  <ion-list>
+    <ion-item>
+        <ion-label color="primary" position="floating">Recipient (To)</ion-label>
+        <ion-input type="text" [(ngModel)]="recipient"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" position="floating">Subject</ion-label>
+        <ion-input type="text" [(ngModel)]="subject"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" position="floating">Message</ion-label>
+        <ion-textarea [(ngModel)]="message"></ion-textarea>
+    </ion-item>
+</ion-list>
+<ion-grid>
+    <ion-row>
+    <ion-col col-3></ion-col>           
+    <ion-button shape="round" color="secondary" ion-button (click)=" send(recipient, subject, message)" >Send</ion-button>
+    <ion-col col-3></ion-col>            
+    </ion-row>
+    </ion-grid>
+</ion-content>
